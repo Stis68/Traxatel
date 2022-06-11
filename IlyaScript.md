@@ -74,7 +74,7 @@ two.Size = UDim2.new(0, 149, 0, 19)
 two.Font = Enum.Font.SourceSans
 two.TextColor3 = Color3.fromRGB(0, 0, 0)
 two.TextSize = 14.000
-two.Text = "XYETA CHTOBI TP(y)"
+two.Text = "XYETA CHTOBI TP(Tool)"
 two.MouseButton1Down:connect(function()
 	mouse=game.Players.LocalPlayer:GetMouse()
 	tool = Instance.new("Tool")
