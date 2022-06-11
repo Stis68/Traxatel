@@ -355,6 +355,22 @@ five.Size = UDim2.new(0, 149, 0, 19)
 five.Font = Enum.Font.SourceSans
 five.TextColor3 = Color3.fromRGB(0, 0, 0)
 five.TextSize = 14.000
+five.Text = "Sapogi Mario"
+five.MouseButton1Down:connect(function()
+local v=true;
+game:GetService("UserInputService").JumpRequest:connect(function()
+if v then game:GetService"Players".LocalPlayer.Character:
+FindFirstChildOfClass'Humanoid':
+ChangeState("Jumping")end 
+end)
+local w=CreateButton("Infinite Jump: Off",StuffFrame)
+w.Position=UDim2.new(0,10,0,130)
+w.Size=UDim2.new(0,150,0,30)
+w.MouseButton1Click:connect(function()
+local x=w.Text:sub(string.len("Infinite Jump: ")+1)
+local y=x=="Off"and"On"or x=="On"and"Off"v=y=="On"
+w.Text="Infinite Jump: "..y end)
+end)
 
 four.Name = "four"
 four.Parent = menu
