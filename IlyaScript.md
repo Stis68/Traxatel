@@ -42,7 +42,6 @@ local knopka = Instance.new("Frame")
 local close = Instance.new("TextButton")
 local childnon = Instance.new("TextBox")
 local childdop = Instance.new("ScreenGui")
-tool = Instance.new("Tool")
 
 --Properties:
 
@@ -78,6 +77,7 @@ two.TextSize = 14.000
 two.Text = "XYETA CHTOBI TP(y)"
 two.MouseButton1Down:connect(function()
 	mouse=game.Players.LocalPlayer:GetMouse()
+	tool = Instance.new("Tool")
 	tool.RequiresHandle=false;
 	tool.Name="YbeiteMenia TP"
 	tool.Activated:connect(function()local z=mouse.Hit+Vector3.new(0,2.5,0)
