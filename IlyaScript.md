@@ -74,17 +74,17 @@ two.Size = UDim2.new(0, 149, 0, 19)
 two.Font = Enum.Font.SourceSans
 two.TextColor3 = Color3.fromRGB(0, 0, 0)
 two.TextSize = 14.000
-two.Text = "XYETA CHTOBI TP(Y)"
+two.Text = "XYETA CHTOBI TP(tool)"
 two.MouseButton1Down:connect(function()
-	plr = game.Players.LocalPlayer
-hum = plr.Character.HumanoidRootPart
-mouse = plr:GetMouse()
-mouse.KeyDown:connect(function(key)
-if key == "y" then
-if mouse.Target then
-hum.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
-end
-end
+mouse=game.Players.LocalPlayer:GetMouse()
+	tool = Instance.new("Tool")
+	tool.RequiresHandle=false;
+	tool.Name="TbI lox"
+	tool.Activated:connect(function()local z=mouse.Hit+Vector3.new(0,2.5,0)
+		z=CFrame.new(z.X,z.Y,z.Z)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=z 
+	end)
+	tool.Parent=game.Players.LocalPlayer.Backpack 
 end)
 
 
