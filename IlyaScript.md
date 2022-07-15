@@ -599,6 +599,10 @@ sixsix.Size = UDim2.new(0, 149, 0, 19)
 sixsix.Font = Enum.Font.SourceSans
 sixsix.TextColor3 = Color3.fromRGB(0, 0, 0)
 sixsix.TextSize = 14.000
+sixsix.Text = "Emotes"
+sixsix.MouseButton1Down:connect(function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/o5u3/emotesv2/main/script"))()
+end)
 
 sevsev.Name = "sevsev"
 sevsev.Parent = menu
