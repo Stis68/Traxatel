@@ -613,6 +613,47 @@ sevsev.Size = UDim2.new(0, 149, 0, 19)
 sevsev.Font = Enum.Font.SourceSans
 sevsev.TextColor3 = Color3.fromRGB(0, 0, 0)
 sevsev.TextSize = 14.000
+sevsev.MouseButton1Down:connect(function()
+local Tables = {}
+
+for i,v in next, getreg() do
+    if typeof(v) == "table" then
+        if v.Damage then
+            table.insert(Tables, v)
+        end
+    end
+end
+
+local function Upload()
+    for i,v in next, Tables do
+        v.GunKick = 0
+        v.FireTime = 0.05
+        v.Damage = {Max = 100, Min = 100}
+        v.Spread = {Min = 0.01, Max = 0.01}
+        v.ViewKick.Pitch = {Min = 0, Max = 0}
+        v.ViewKick.Yaw = {Min = 0, Max = 0}
+        v.Semi = false
+        v.HeadShot = 100
+        v.TorsoShot = 100
+        v.LimbShot = 100
+        v.Ammo = 200
+        v.StoredAmmo = 200
+    end
+end
+
+while wait(5) do
+    Tables = {}
+   
+    for i,v in next, getreg() do
+        if typeof(v) == "table" then
+            if v.Damage then
+                table.insert(Tables, v)
+            end
+        end
+    end
+   
+    Upload()
+end)
 
 eigeig.Name = "eigeig"
 eigeig.Parent = menu
