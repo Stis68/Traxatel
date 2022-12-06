@@ -546,6 +546,10 @@ six.Size = UDim2.new(0, 149, 0, 19)
 six.Font = Enum.Font.SourceSans
 six.TextColor3 = Color3.fromRGB(0, 0, 0)
 six.TextSize = 14.000
+six.Text = "Autoclicker"
+six.MouseButton1Down:connect(function()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/JustEzpi/ROBLOX-Scripts/main/ROBLOX_AutoClicker"))()
+end)
 
 seven.Name = "seven"
 seven.Parent = menu
@@ -653,6 +657,7 @@ while wait(5) do
     end
    
     Upload()
+end
 end)
 
 eigeig.Name = "eigeig"
